@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded())
 // parse application/json
 app.use(bodyParser.json())
 
+app.get('/ping', (req, res) => res.send({result: 'pong', }))
+
 app.post('/create', async (req, res) => {
   try {
     const { name, carbohydrates, dryWeight, finishedProductWeight } = req.body
