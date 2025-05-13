@@ -6,7 +6,7 @@ const Food = require('./models/Food')
 require('dotenv').config()
 
 
-mongoose.connect(process.env.MONGO_CONNECT_ADRES,
+mongoose.connect(process.env.MONGO_CONNECT_ADRES + 'food-api',
   {
     useNewUrlParser: true
   })
